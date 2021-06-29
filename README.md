@@ -1,1 +1,0 @@
-# bogota-spatial-injustice
