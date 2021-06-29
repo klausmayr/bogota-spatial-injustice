@@ -50,7 +50,7 @@ L.geoJSON(fireRisk, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -74,7 +74,7 @@ L.geoJSON(hasCar, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -95,7 +95,7 @@ L.geoJSON(pestProb, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -117,7 +117,7 @@ L.geoJSON(withoutFood, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -139,7 +139,7 @@ L.geoJSON(gatedComm, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -161,7 +161,7 @@ L.geoJSON(decreasedAir, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -183,7 +183,7 @@ L.geoJSON(factProx, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
@@ -203,7 +203,7 @@ L.geoJSON(sewageProx, {
       },
     onEachFeature: function(feature,layer){
       layer.on('mouseover',function() {
-        layer.setStyle({fillOpacity: 0.2})
+        layer.setStyle({fillOpacity: 0})
       })
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
