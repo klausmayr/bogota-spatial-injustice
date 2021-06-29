@@ -34,11 +34,62 @@
         height: 100%;
         margin: 0;
       }
+
+      h1 {
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 10%;
+        padding-bottom: 0px;
+      }
+      h3 {
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 10%;
+        padding-top: 0px;
+        font-style: oblique;
+      }
+
+      p {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-style: oblique;
+      }
+      #one {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 10%;
+        padding-right: 15%;
+        font-style: oblique;
+      }
+
+      #two {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 10%;
+        padding-right: 15%;
+      }
+
+      h2 {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-right: 10px;
+        padding-left: 10px;
+
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-row-gap: 20px;
+        padding-left: 10px;
       }
+      #paragraph-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
       #map {
         width: 90%;
         height: 300px;
@@ -84,17 +135,18 @@
         color: #777;
       }
       .legend {
-        text-align: left;
-        line-height: 18px;
-        color: #555;
+            line-height: 18px;
+            color: #555;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
       }
-      .legend i {
-        width: 18px;
-        height: 18px;
-        float: left;
-        margin-right: 8px;
-        opacity: 0.7;
-      }
+
+     
     </style>
   </head>
 
@@ -111,21 +163,69 @@
       </span>
     </div>
 
+    <h1>Mapeando la Encuesta Multiproposito de Bogotá</h1>
+    <h3>Mapping Bogotá's Multipurpose Survey</h3>
+    <div class="container" id="paragraph-container"></div>
+      <div><p id= "one">Este projecto utiliza la encuesta expansiva de condiciones sociales, economicas, y politicas en Bogotá que se llama la <a href="https://datosabiertos.bogota.gov.co/dataset/encuesta-multiproposito-2017-sdp">Encuesta Multipropósito.</a> La disponible al publico viene con un diccionario de las preguntas, de los cuales hay más de un mil, y un base de datos codificado con las preguntas, las respuestas de más de 100,000 viviendas, y el codigo postal del respondedor. Los mapas presentan apenas un porcentaje de las perspectivas posibles que se puede recoger de este base de datos, pero empiezan a demostrar la dinamicas espaciales del ambiente, la economía, y politicas en la ciudad. De esta manera, podemos profundizar y desafiar nuestros entendimientos de como esta organizada.</p></div>
+      <div><p id= "two">This project uses the expansive survey of social, political, and economic conditions in Bogotá called the <a href="https://datosabiertos.bogota.gov.co/dataset/encuesta-multiproposito-2017-sdp"> Multipurpose Survey. </a> The data available to the public includes a dictionary of questions, of which there are more than a thousand, and a database coded with the questions, the answers of more than 100,000 homes, and the postal code of the respondent. The maps present only a percentage of the possible insights that can be gleaned from this database, but they begin to show the spatial dynamics of the environment, the economy, and politics in the city. In this way, we can deepen and challenge our understandings of how it is organized.</p></div>
+    </div>
+
     <div class="container">
-      <div id="map"></div>
-      <div id="map2"></div>
-      <div id="map3"></div>
-      <div id="map4"></div>
-      <div id="map5"></div>
-      <div id="map6"></div>
-      <div id="map7"></div>
-      <div id="map8"></div>
+      <div id="map1-wrapper">
+        <div id="map"></div>
+        <p>Porcentaje que indica que la vivienda está cerca de zona de riesgo de incendio forestal.</p>
+        <h2>Percent that indicated that their home is close to an area at risk of forest fires.</h2>
+      </div>
+      <div id="map2-wrapper">
+        <div id="map2"></div>
+        <p>Porcentaje que tiene carro particular.</p>
+        <h2>Percent that own at least one personal car.</h2>
+      </div>
+      <div id="map3-wrapper">
+        <div id="map3"></div>
+        <p>Porcentaje que indica que hay una presencia de insectos, roedores o animales que causen molestia.</p>
+        <h2>Percent that indicated that there are pests near their home.</h2>
+      </div>
+      <div id="map4-wrapper">
+        <div id="map4"></div>
+        <p>Porcentaje que indica que en los ultimos 30 días, alguna vez alguien en la casa no tenía alimentos suficientes por falta de dinero.</p>
+        <h2>Percent that idicate that in the last 30 days, someone in their household has not had enough food to eat because of a lack of money.</h2>
+      </div>
+      <div id="map5-wrapper">
+        <div id="map5"></div>
+        <p>Porcentaje que vive en un conjunto encerada.</p>
+        <h2>Percent that live in a gated community</h2>
+      </div>
+      <div id="map6-wrapper">
+        <div id="map6"></div>
+        <p>Porcentaje que indica que la calidad de aire se ha peorado en los ultimos tres años.</p>
+        <h2>Percent that indicate that the air quality has decreased in the last 30 years.</h2>
+      </div>
+      <div id="map7-wrapper">
+        <div id="map7"></div>
+        <p>Porcentaje que indica que la vivienda está ubicada cerca de una fabrica.</p>
+        <h2>Percent that indicate that their home is located near a factory.</h2>
+      </div>
+      <div id="map8-wrapper">
+        <div id="map8"></div>
+        <p>Porcentaje que indica que la vivienda está ubicada cerca de caños residuales.</p>
+        <h2>Percent that indicate that their home is located near sewage systems.</h2>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="bogotaData.js"></script>
+    <script src="fire-risk.js"></script>
+    <script src="fact-prox.js"></script>
+    <script src="has-car.js"></script>
+    <script src="sewage-prox.js"></script>
+    <script src="without-food.js"></script>
+    <script src="decreased-air.js"></script>
+    <script src="gated-comm.js"></script>
+    <script src="pest-problem.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="L.Map.Sync.js"></script>
+    
     
   </body>
 </html>
