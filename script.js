@@ -375,7 +375,7 @@ L.geoJSON(sewageProx, {
     legend6.onAdd = function (map) {
     
       var div = L.DomUtil.create('div', 'info legend'),
-          grades = [5, 10, 25, 50],
+          grades = [10, 20, 40, 60],
           labels = [];
   
       // loop through our density intervals and generate a label with a colored square for each interval
@@ -395,7 +395,7 @@ L.geoJSON(sewageProx, {
   legend7.onAdd = function (map) {
   
     var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0.75, 1.5, 3, 6],
+        grades = [1, 2, 4, 7],
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
@@ -416,7 +416,7 @@ var legend8 = L.control({position: 'bottomright'});
 legend8.onAdd = function (map) {
 
   var div = L.DomUtil.create('div', 'info legend'),
-      grades = [0.5, 1.5, 3, 5],
+      grades = [1, 2, 4, 6],
       labels = [];
 
   // loop through our density intervals and generate a label with a colored square for each interval
@@ -456,13 +456,13 @@ legend8.addTo(map8);
     }
     
     function getColorAir(d) {
-      return d > 50
+      return d > 60
       ? "#238b45"
-      : d > 25
+      : d > 40
       ? "#66c2a4"
-      : d > 10
+      : d > 20
       ? "#b2e2e2"
-      : d > 5
+      : d > 10
       ? "#edf8fb"
       : "#eeeeee";
     }
@@ -480,13 +480,13 @@ legend8.addTo(map8);
     }
     
     function getColorSewage(d) {
-      return d > 5
+      return d > 6
       ? "#238b45"
-      : d > 3
+      : d > 4
       ? "#66c2a4"
-      : d > 1.5
+      : d > 2
       ? "#b2e2e2"
-      : d > 0.5
+      : d > 1
       ? "#edf8fb"
       : "#eeeeee";
     }
@@ -504,13 +504,13 @@ legend8.addTo(map8);
     }
     
     function getColorFact(d) {
-      return d > 6
+      return d > 7
       ? "#238b45"
-      : d > 3
+      : d > 4
       ? "#66c2a4"
-      : d > 1.5
+      : d > 2
       ? "#b2e2e2"
-      : d > 0.75
+      : d > 1
       ? "#edf8fb"
       : "#eeeeee";
     }
