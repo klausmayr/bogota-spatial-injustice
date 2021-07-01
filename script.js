@@ -36,6 +36,8 @@ var osm = new L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(
 
 
 
+
+
 fetch('https://api.npoint.io/7108b9803e1dd0d18a3e', {
   method: 'GET'
 })
@@ -95,6 +97,12 @@ L.geoJSON(hasCar, {
 })
 
 
+fetch('https://api.npoint.io/c50e1954196a91ea49be', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
+
 L.geoJSON(pestProb, {
       style: function(feature) {
         return {
@@ -114,8 +122,13 @@ L.geoJSON(pestProb, {
       })
     }
     }).addTo(map3);
+})
 
-
+fetch('https://api.npoint.io/208a3b6a244fae44e521', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(withoutFood, {
       style: function(feature) {
@@ -136,8 +149,14 @@ L.geoJSON(withoutFood, {
       })
     }
     }).addTo(map4);
+})
 
 
+fetch('https://api.npoint.io/7bd21778c93ab70adc83', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(gatedComm, {
       style: function(feature) {
@@ -158,8 +177,14 @@ L.geoJSON(gatedComm, {
       })
     }
     }).addTo(map5);
+})
 
 
+fetch('https://api.npoint.io/88a1662db733bc1cda40', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(decreasedAir, {
       style: function(feature) {
@@ -180,8 +205,15 @@ L.geoJSON(decreasedAir, {
       })
     }
     }).addTo(map6);
+  
+  })
 
 
+fetch('https://api.npoint.io/bff73a1ceb6ab340f224', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(factProx, {
       style: function(feature) {
@@ -202,6 +234,14 @@ L.geoJSON(factProx, {
       })
     }
     }).addTo(map7);
+  
+   })
+
+fetch('https://api.npoint.io/7932b678e58f37a3fb12', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(sewageProx, {
       style: function(feature) {
@@ -222,6 +262,9 @@ L.geoJSON(sewageProx, {
       })
     }
     }).addTo(map8);
+
+  })
+  
 
 
     map.sync(map2);
