@@ -36,8 +36,13 @@ var osm = new L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(
 
 
 
-
-L.geoJSON(fireRisk, {
+fetch('https://api.npoint.io/7108b9803e1dd0d18a3e', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
+  
+fireRiskMap = L.geoJSON(json, {
       style: function(feature) {
         return {
           fillColor: getColorFire(feature.properties.riesdo_de_insindio_field_5),
@@ -57,10 +62,16 @@ L.geoJSON(fireRisk, {
       })
     }
     }).addTo(map);
+})
 
 
 
 
+fetch('https://api.npoint.io/72ce27416143c8cd4add', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(json => {
 
 L.geoJSON(hasCar, {
       style: function(feature) {
@@ -81,6 +92,7 @@ L.geoJSON(hasCar, {
       })
     }
     }).addTo(map2);
+})
 
 
 L.geoJSON(pestProb, {
