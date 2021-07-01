@@ -37,11 +37,6 @@ var osm = new L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(
 
 
 
-function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
-}
-
-
 L.geoJSON(fireRisk, {
       style: function(feature) {
         return {
@@ -60,9 +55,7 @@ L.geoJSON(fireRisk, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
-    }
+
     }).addTo(map);
 
 
@@ -86,8 +79,6 @@ L.geoJSON(hasCar, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map2);
 
@@ -109,8 +100,6 @@ L.geoJSON(pestProb, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map3);
 
@@ -133,8 +122,6 @@ L.geoJSON(withoutFood, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map4);
 
@@ -157,8 +144,6 @@ L.geoJSON(gatedComm, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map5);
 
@@ -181,8 +166,6 @@ L.geoJSON(decreasedAir, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map6);
 
@@ -205,8 +188,6 @@ L.geoJSON(factProx, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map7);
 
@@ -227,8 +208,6 @@ L.geoJSON(sewageProx, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-      layer.on('click', function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds())})
     }
     }).addTo(map8);
 
