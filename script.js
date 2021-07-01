@@ -55,7 +55,7 @@ L.geoJSON(fireRisk, {
       layer.on('mouseout',function() {
         layer.setStyle({fillOpacity: 0.6})
       })
-
+    }
     }).addTo(map);
 
 
